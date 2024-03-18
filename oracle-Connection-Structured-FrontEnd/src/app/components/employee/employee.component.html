@@ -1,0 +1,52 @@
+<!-- employee-list.component.html -->
+<div class="filter-sort-container">
+<div class="filter-container">
+  <input type="text" [(ngModel)]="filterName" placeholder="Enter name to filter">
+  <button (click)="applyFilter()">Filter</button>
+</div>
+<div class="sortContainer">
+  <select [(ngModel)]="sortOrder">
+    <option value="SortA">Sort Ascending</option>
+    <option value="SortD">Sort Descending</option>
+  </select>
+  <button (click)="applySorting()">Apply Sorting</button>
+</div>
+</div>
+<!-- <div *ngIf="employees"> -->
+  <div *ngIf="filteredEmployees">
+    <h2>Employee List</h2>
+    <table class="employee-table">
+      <thead>
+        <tr>
+          <th>Employee ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Phone Number</th>
+          <th>Hire Date</th>
+          <th>Job ID</th>
+          <th>Salary</th>
+          <th>Commission Pct</th>
+          <th>Manager ID</th>
+          <th>Department ID</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- <tr *ngFor="let employee of employees"> -->
+          <tr *ngFor="let employee of filteredEmployees">
+          <td>{{ employee.EMPLOYEE_ID }}</td>
+          <td>{{ employee.FIRST_NAME }}</td>
+          <td>{{ employee.LAST_NAME }}</td>
+          <td>{{ employee.EMAIL }}</td>
+          <td>{{ employee.PHONE_NUMBER }}</td>
+          <td>{{ employee.HIRE_DATE }}</td>
+          <td>{{ employee.JOB_ID }}</td>
+          <td>{{ employee.SALARY }}</td>
+          <td>{{ employee.COMMISSION_PCT }}</td>
+          <td>{{ employee.MANAGER_ID }}</td>
+          <td>{{ employee.DEPARTMENT_ID }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

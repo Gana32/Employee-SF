@@ -1,0 +1,39 @@
+<input type="number" [(ngModel)]="searchId" placeholder="Search by ID">
+<button (click)="searchEmployee()">Search</button>
+<!-- <div *ngIf="employee">
+    <p>{{ employee | json }}</p>
+</div> -->
+ <div *ngIf="employees.length > 0">
+    <table class="employee-table">
+        <thead>
+            <tr>
+                <th>Employee ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Hire Date</th>
+                <th>Job ID</th>
+                <th>Salary</th>
+                <th>Commission Pct</th>
+                <th>Manager ID</th>
+                <th>Department ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of employees">
+                <td>{{ emp.EMPLOYEE_ID }}</td>
+                <td>{{ emp.FIRST_NAME }}</td>
+                <td>{{ emp.LAST_NAME }}</td>
+                <td>{{ emp.EMAIL }}</td>
+                <td>{{ emp.PHONE_NUMBER }}</td>
+                <td>{{ emp.HIRE_DATE | date: 'short' }}</td>
+                <td>{{ emp.JOB_ID }}</td>
+                <td>{{ emp.SALARY }}</td>
+                <td>{{ emp.COMMISSION_PCT }}</td>
+                <td>{{ emp.MANAGER_ID }}</td>
+                <td>{{ emp.DEPARTMENT_ID }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

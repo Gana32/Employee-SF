@@ -1,0 +1,41 @@
+/* styles.css */
+
+.employee-table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .employee-table th,
+  .employee-table td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  .employee-table th {
+    background-color: #f2f2f2;
+  }
+  
+  /* employee.component.css */
+
+.filter-sort-container {
+  display: flex;
+  justify-content: flex-end; /* Align items to the right side */
+  padding: 10px; /* Optional: Add padding for spacing */
+}
+
+.filter-container,
+.sort-container {
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+.filter-container input[type="text"] {
+  margin-right: 5px; /* Optional: Add spacing between input and button */
+}
+
+.sort-container select {
+  margin-right: 5px; /* Optional: Add spacing between select and button */
+}
+
+  
